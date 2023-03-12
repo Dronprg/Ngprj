@@ -1,0 +1,6 @@
+<div *ngIf="productCart" style="display: inline-table; width: 100%;" >
+    <div class="products" style="display:table-cell; width:60%;">{{productCart.product.title}}</div>
+    <div style="display: table-cell; width: 10%;"> Count: <input id="count" [(ngModel)]="productCart.count" style="width: 20px;" ></div>
+    <div style="display: table-cell; width: 10%;">${{productCart.product.price}}</div>
+    <div style="display: table-cell; width: 10%;"><button type="button" (click)="addToCartClick(productCart)">Add to cart</button></div>
+</div>
